@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Test</title>
+    <link rel="shortcut icon" href="../../public/img/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="../../public/css/tailwind.css" />
+  </head>
+  <body class="font-body bg-secondary-300">
+    <nav class="flex justify-between items-center lg:p-5 mt-2 px-10 pt-5 md:mx-20">
+      <a href="../../index.html">
+        <img src="../../public/img/logo.svg" alt="logo" class="sm:w-14 w-10 z-10" />
+      </a>
+
+      <div class="z-10 relative" x-data="{isOpen : false}">
+        <button class="py-2 px-3 rounded flex focus:outline-none" @click="isOpen = true">
+          <span class="mr-5 hidden sm:block text-secondary-600">Andika permana sidiq</span>
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#193A5C"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-user"
+          >
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </button>
+
+        <ul class="w-36 bg-white absolute sm:-right-10 -right-7 top-10 sm:top-12 rounded-sm py-3 shadow" x-show.transition="isOpen" @click.away="isOpen = !isOpen">
+          <li>
+            <a href="" class="flex w-full justify-evenly text-secondary-600 py-2 text-sm hover:bg-secondary-100">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#193A5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              Profile
+            </a>
+          </li>
+          <li>
+            <a href="../auth/login.html" class="flex w-full justify-evenly text-secondary-600 py-2 hover:bg-secondary-100 text-sm">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#193A5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-in">
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                <polyline points="10 17 15 12 10 7"></polyline>
+                <line x1="15" y1="12" x2="3" y2="12"></line>
+              </svg>
+              Log in
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="sm:m-20 m-5 sm:px-5">
+      <div class="sm:px-10 sm:py-14 p-10 rounded-lg shadow-md bg-white">
+        <div class="flex xl:flex-row flex-col">
+          <!-- profile information -->
+          <div class="flex xl:w-1/2 w-full xl:items-start items-center mr-5 xl:mb-0 mb-10 lg:flex-row flex-col">
+            <!-- avatar -->
+            <div class="sm:w-1/3 flex flex-col items-center w-full lg:mr-10 lg:mb-0 mb-10">
+              <img src="../../public/img/male.png" alt="avatar" class="w-32 mb-3" />
+              <a href="#" class="button bg-primary hover:bg-blue-600">Ubah Profile</a>
+            </div>
+            <!-- desc -->
+            <div class="text-secondary-600 h-44 flex flex-col justify-center">
+              <h2 class="font-bold sm:text-2xl text-sm text-center lg:text-left">Andika Permana Sidiq</h2>
+              <div class="flex my-5 sm:flex-row flex-col">
+                <!-- email -->
+                <div class="flex text-sm items-center text-secondary-200 sm:mr-5">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A6A8AA67" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span class="ml-3 text-xs sm:text-sm"> andikapermanasidiq00@gmail.com </span>
+                </div>
+                <!-- phone number -->
+                <div class="flex text-sm items-center text-secondary-200">
+                  <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#A6A8AA67">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                  <span class="ml-3 text-xs sm:text-sm"> 085321874357 </span>
+                </div>
+              </div>
+
+              <p class="sm:text-sm text-xs lg:text-left text-center">I love programming without bug</p>
+
+              <div class="flex items-center lg:justify-start justify-center text-secondary-200 mt-5 sm:flex-row flex-col">
+                <span class="sm:text-sm text-xs">Member Since 01 April 2021</span>
+
+                <div class="bg-info text-white sm:ml-5 sm:mt-0 mt-3 text-sm badge">Pengajar</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- active online test -->
+          <div class="xl:w-1/2 w-full lg:border-l-2 lg:pl-10">
+            <h2 class="font-medium text-lg text-secondary-600">Online Test yang aktif</h2>
+            <div class="flex flex-col">
+              <div class="my-3 card-sm sm:flex-row flex-col">
+                <h1 class="text-primary sm:text-lg text-sm font-semibold sm:mb-0 mb-3">Quiz Pertemuan 01</h1>
+                <a href="#" class="bg-secondary-500 hover:bg-yellow-500 transition-all text-white text-sm badge">20 Respons</a>
+              </div>
+
+              <div class="my-3 card-sm sm:flex-row flex-col">
+                <h1 class="text-primary sm:text-lg text-sm font-semibold sm:mb-0 mb-3">Test</h1>
+                <a href="#" class="bg-danger hover:bg-red-700 transition-all text-white text-sm badge">0 Respons</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-20">
+          <div class="flex justify-between lg:flex-row flex-col">
+            <h1 class="text-secondary-600 text-xl font-semibold">Daftar <span class="text-primary">Online</span> <span class="text-secondary-500">Test</span> yang anda buat</h1>
+
+            <a href="#" class="button bg-primary hover:bg-blue-600 text-center">Tambah Online Test</a>
+          </div>
+
+          <!-- card-sm -->
+          <div class="my-10 card-sm xl:flex-row flex-col">
+            <div class="flex items-center lg:flex-row flex-col lg:mb-5 xl:mb-0">
+              <h1 class="text-primary sm:text-lg text-sm font-semibold">Quiz Pertemuan 01</h1>
+
+              <a href="#" class="button bg-danger hover:bg-red-700 transition-colors lg:ml-3 lg:mt-0 mt-3">Tambah Soal</a>
+            </div>
+
+            <div class="flex items-center lg:flex-row flex-col">
+              <a href="#" class="button bg-primary hover:bg-blue-600 transition-colors lg:mr-3 lg:my-0 my-3">Ubah Data</a>
+
+              <div class="bg-info transition-all text-white text-sm badge flex flex-col xl:flex-row">
+                <div class="text-white flex items-center">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg>
+                  <span class="ml-3">QT-02</span>
+                </div>
+
+                <div class="text-white flex items-center sm:flex-row flex-col xl:mx-3 xl:my-0 my-3">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  <span class="ml-3">12 April 2021, 10:00:00, end 19 April 2021, 10:00:00</span>
+                </div>
+
+                <div class="text-white flex items-center xl:mr-3 xl:my-0 mb-3">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-key">
+                    <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path>
+                  </svg>
+                  <span class="ml-3">AECBE</span>
+                </div>
+
+                <div class="text-white flex items-center">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span class="ml-3">60 Menit</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- / card-sm -->
+        </div>
+      </div>
+    </section>
+
+    <script src="../../public/dist/alpine.js"></script>
+  </body>
+</html>

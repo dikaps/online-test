@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Test</title>
+    <link rel="shortcut icon" href="../../public/img/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="../../public/css/tailwind.css" />
+  </head>
+  <body class="font-body">
+    <div class="auth">
+      <div class="auth-image">
+        <img src="../../public/img/login.png" alt="" class="object-cover h-full object-center" />
+      </div>
+      <div class="auth-body">
+        <img src="../../public/img/logo.svg" alt="logo" class="auth-logo" />
+
+        <div class="bubble right-56 bottom-28" style="background-color: #2a86e213"></div>
+        <div class="bubble right-72 bottom-36" style="background-color: #30c06513"></div>
+        <div class="bubble left-52 bottom-44" style="background-color: #a4e22a13"></div>
+        <div class="bubble left-0 -top-20 hidden sm:block" style="background-color: #e22a6713"></div>
+
+        <!-- card -->
+        <div class="auth-card">
+          <h1 class="auth-card_title"><span class="text-primary">l o g</span> <span class="text-secondary-500">i n</span></h1>
+
+          <div class="auth-card_form">
+            <form action="#" autocomplete="off" method="POST">
+              <input type="email" placeholder="Email" name="email" class="form-input text-secondary-200 bg-secondary-100 mb-4 focus:border-gray-500 border-2" />
+
+              <div class="flex relative" x-data="{show : true}">
+                <input :type="show ? 'password' : 'text'" placeholder="Kata Sandi" name="password" class="form-input text-secondary-200 bg-secondary-100 mb-4 focus:border-gray-500 border-2" />
+
+                <svg
+                  @click="show = !show"
+                  :class="{'hidden' : !show, 'block':show}"
+                  width="24"
+                  class="absolute right-5 sm:top-3 top-4"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#A6A8AA89"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-eye"
+                >
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+
+                <svg
+                  @click="show = !show"
+                  :class="{'block' : !show, 'hidden':show}"
+                  class="absolute right-5 sm:top-3 top-4 hidden"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#A6A8AA89"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-eye-off"
+                >
+                  <path
+                    d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"
+                  ></path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </div>
+
+              <button type="submit" class="form-button bg-primary hover:bg-blue-600 transition-all">masuk</button>
+            </form>
+
+            <div class="flex justify-between w-full text-sm text-secondary-200 mt-3">
+              <a href="lupa-sandi.html">Lupa sandi?</a>
+              <a href="daftar-akun.html">Daftar Akun?</a>
+            </div>
+          </div>
+        </div>
+        <!-- /card -->
+      </div>
+    </div>
+
+    <script src="../../public/dist/alpine.js"></script>
+  </body>
+</html>
